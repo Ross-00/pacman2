@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportes</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; }
+        header { background: #9d0208; color: white; padding: 15px; text-align: center; font-size: 24px; }
+        nav { background: #d62828; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 10px; text-decoration: none; padding: 10px; display: inline-block; }
+        .main-container { display: flex; padding: 20px; }
+        aside { width: 25%; background: #f4f4f4; padding: 15px; }
+        .content { width: 75%; padding: 15px; }
+        footer { background: #370617; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        EMPRESA DE TRANSPORTES
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="destinos.html">Paquetes Turisticos</a>
+        <a href="ofertas.html">Precios</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    
+    <div class="main-container">
+        <aside>
+            <h3>Categorías</h3>
+            <ul>
+                <li><a href="Pasajes.html">Pasajes</a></li>
+                <li><a href="#">Horarios Disponibles</a></li>
+                <li><a href="#">Precios</a></li>
+                <li><a href="Destinos1.html">Destinos</a></li>
+            </ul>
+        </aside>
+        
+        <div class="content">
+            <h1>Bienvenido a Nuestra Empresa de Transportes</h1>
+            <p>Encuentra la mejor tecnología al mejor precio. Revisa nuestro catálogo y descubre nuestras ofertas.</p>
+            
+            <h1>Galería Interactiva de Fotos</h1>
+            
+    <button id="addImage">Agregar Imagen</button>
+    
+
+    <div id="gallery"></div>
+
+    <script>
+        const imagenes = [
+            "img/foto1.jpg",
+            "img/foto2.jpg",
+            "img/foto3.jpg",
+            "img/fondoweb.gif",
+            
+        ];
+
+        let index = 0;
+
+        document.getElementById('addImage').addEventListener('click', function() {
+            if (index < imagenes.length) {
+                const gallery = document.getElementById('gallery');
+                const img = document.createElement('img');
+                img.src = imagenes[index];
+                gallery.appendChild(img);
+                index++;
+            } else {
+                alert("Ya se han mostrado todas las imágenes.");
+            }
+        });
+    </script>
+        </div>
+    </div>
+    
+    
+    <footer>
+        &copy; 2025 Empresa de transportes - Todos los derechos reservados.
+    </footer>
+</body>
+</html>
